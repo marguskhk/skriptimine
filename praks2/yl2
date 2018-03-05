@@ -1,10 +1,12 @@
 #!/bin/bash
 #
-#Koostada script, mis väljastab nime,grupi, arvamus õppivast ainest
+# kasutajate nimikiri kujul Perenimi, Eesnimi
 #
-echo "Margus Noppel"        #väljastab nime
-echo "IS117"                #väljasab grupi
-echo "Aine tundub väga põnev ja huvitav" #väljastab esmamulje
-echo "Sattusin probleemi otsa, mis käis närvidele, aga selle likvideermisega sain palju targemaks käskude osas" #väljastab praeguse mulje ja edasijõudmine
+#skripti algus
+#
+who | cut -f1 -d" " |cut -f2 -d"." > perenimi # lõikame perenime - see on 2 . element peale punkti  ja salvestame faili
+who | cut -f1 -d" " |cut -f1 -d"." > eesnimi # lõikame eesnimi- see on 1. element ennem punkti ja salvestame faili
+paste -d"." perenimi eesnimi > nimed # kleebime need failid vastavad järjekorras kokku
+cat nimed | sort | uniq  # sorteerime väljundi ja võtame korduvad välja
 #
 # skripti lõpp
