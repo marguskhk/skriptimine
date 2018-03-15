@@ -1,3 +1,4 @@
 #!/bin/bash
 
 echo "$HOSTNAME at $(uptime)" | grep "," | cut -f 1 -d ","
+#hostname  commandiga hosti nimi, uptime commandiga  ütleb töös oleva aja, grepi ja cutiga  lõigata mitte vajav informatsioon välja
