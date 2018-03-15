@@ -1,0 +1,6 @@
+#!/bin/bash
+
+find /var -iname *.log -exec wc -l {} + 2>/dev/null |  sort -rn
+#find käsuga  /var kaustast ükskõik mis  tähesuurusega .log sisaldavaid faile
+#errorite  mitte näitamiseks suuname need  nulli,  ning sort  käsuga
+#sorteerime leitud failid kahanemisjärjekorras
