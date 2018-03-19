@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -n "Sisesta oma ees-ja perenimi: " #  viskab erkaanile  jutumärkides oleva lause
+read eesnimi perenimi #pead sisestama oma eesnime ja perenime
+echo "Sinu eesnimi on $eesnimi ja perenimi on $perenimi" # pärast oma  nimede sisestamist tuleb ekraanile jutumärkides olev tekst
