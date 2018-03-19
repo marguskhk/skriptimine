@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+#
+echo "Sisestada grupi suurus:"
+read suurus
+echo -n "Sisesta bussikohtade arv:"
+read bussikohad
+
+taidetud=`expr $suurus / $bussikohad`
+echo "Taidetud kohti on $taidetud"
+
+mahajaanud=`expr $suurus - $taidetud \* $bussikohad`
+echo Mahajaanud inimesi on $mahajaanud
