@@ -1,0 +1,29 @@
+#!/bin/bash
+# Küpsisetordi valmistamise skirpt
+#
+#Kandiku pindala väärtuse andmine
+echo -n "Sisestage aluskandiku pikkus ja laius cm-ides:"
+read pikkus laius
+kandik=`expr $pikkus \* $laius`
+echo Aluskandiku pindala suurus on: $kandik cm2
+
+#Küpsise pindala väärtuse andmine
+
+echo -n "Sisesta tordil kasutavate küpsiste pikkuse ja laiuse cm-des:"
+read kypsised1 kypsised2
+kypsised=`expr $kypsised1 \* $kypsised2`
+echo "Kypsise suurus on: $kypsised cm2"
+
+
+#Küpsiste arvu määramine küpsisepakis
+echo -n  "Sisestage küpsiste arv ühes pakis:"
+read kypsisepakk
+
+#
+
+#Tordi kihi määramine
+echo -n "Sisestage tordi kihtide arv:"
+read kiht
+kihtide_arv=`expr $kandik / $kypsised \* $kiht / $kypsisepakk`
+echo -n "Tordile tuleb $kihtide_arv pakki küpsist"
+
