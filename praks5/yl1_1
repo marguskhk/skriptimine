@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+#esimese külje sisestamine
+echo -n "Sisesta kolmnurga esimese külje väärtus:"
+read esimene_kylg
+
+#teise külje sisestamine
+echo -n "Sistesta kolmnurga teise külje väärtus:"
+read teine_kylg
+
+#hüpotenuusi arvutamine
+hypotenuus=$(echo "$esimene_kylg^2 + $teine_kylg^2" | bc -l )
+calc=$(echo "scale=2; sqrt($hypotenuus)" | bc -l )
+
+echo "Hypotenuus on: $calc"
