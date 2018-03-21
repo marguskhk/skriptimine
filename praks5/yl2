@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+#esimese külje sisestamine
+echo -n "Sisesta kolmnurga esimese külje väärtus:"
+read a
+
+#teise külje sisestamine
+echo -n "Sistesta kolmnurga teise külje väärtus:"
+read b
+
+#kolmanda külje sisestamine 
+echo -n "Sisesta kolmnurga kolmanda külje väärtus:"
+read c
+
+p=$(echo "($a + $b + $c) /2" | bc -l)
+pindala=$(echo "$p*($p - $a)*($p - $b)*($p - $c)" | bc -l )
+calc=$(echo "scale=2; sqrt($pindala)" | bc -l )
+
+echo "Pindala on: $calc"
