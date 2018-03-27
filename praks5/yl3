@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+#
+Pyhapaev=0
+Esmaspaev=1
+Teisipaev=2
+Kolmapaev=3
+Neljapaev=4
+Reede=5
+Laupaev=6
+#
+echo -n "Sisesta millal sõidad ära":
+read a
+echo -n "Sisesta reisi ööpaevade arv":
+read b
+
+
+c=$(())
+echo -n "Tagasi oled päeval number: "
+
