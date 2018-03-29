@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# süsteemi aja järgi vastav tervitus
+
+aeg=`date | cut -c12-13`
+
+if [ $aeg -gt 6 -a $aeg -lt 12 ]; then
+	tervitus="Tere hommikust!"
+	elif [ $aeg -ge 12 -a $aeg -lt 18 ]; then
+		tervitus="Tere päevast!"
+	elif [ $aeg -ge 18 -a $aeg -lt 22 ]; then
+		tervitus="Tere õhtust!"
+	elif [ $aeg -ge 0 -a $aeg -le 6 -o $aeg -eq 24 ]; then
+		tervitus="Head ööd!"
+			else  echo "Vigane sisend, siseta aeg vahemikus 0-24"
+fi
+echo -n "$tervitus "
+echo -n `whoami | cut -f1 -d"." | cut -c1 | tr [:lower:] [:upper:]`
+echo -n `whoami | cut -f1 -d"." | cut -c2-`
+echo "!"
+#skripti lõpp
