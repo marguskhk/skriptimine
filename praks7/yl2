@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# kuu numbri sisestamine
+
+echo -n "Sisesta kuu number: "
+read kuu
+
+if [ $kuu -ge 3 -a $kuu -le 5 ]; then
+	echo "Praegu on kevad"
+else
+	if [ $kuu -ge 6 -a $kuu -le 8 ]; then
+		echo "Praegu on suvi"
+else
+	if [ $kuu -ge 9 -a $kuu -le 11 ]; then
+		echo "Preagu on sügis"
+else
+	if [ $kuu -gt 0 -a $kuu -le 2 -o $kuu -eq 12 ]; then
+		echo "Preagu on talv"
+			fi
+		fi
+	fi
+fi
+#skripti lõpp
