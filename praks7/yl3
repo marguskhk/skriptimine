@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# kella aja sisestamine
+
+echo -n "Sisesta tunni aja väärtus: "
+read aeg
+
+if [ $aeg -ge 6 -a $aeg -lt 12 ]; then
+	echo "Tere hommikust!"
+else
+	if [ $aeg -ge 12 -a $aeg -lt 18 ]; then
+		echo "Tere päevast!"
+else
+	if [ $aeg -ge 18 -a $aeg -lt 22 ]; then
+		echo "Tere õhtust!"
+else
+	if [ $aeg -ge 0 -a $aeg -le 6 -o $aeg -eq 24 ]; then
+		echo "Head ööd!"
+			else  echo "Vigane sisend, siseta aeg vahemikus 0-24"
+			fi
+		fi
+	fi
+fi
+#skripti lõpp
