@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Skript arvutab sisestatud arvu numbrite summat ja väljastab koos seletava tekstiga
+
+echo -n "Sisesta suvaline täisarv: "
+read taisarv
+#kui numbrid on negatiivsed - muudame positiivseks
+if [ $taisarv -lt 0 ]; then
+	taisarv=$(($taisarv * -1)) #Kui numbrid on negatiivsed, muudab pos
+fi
+echo "Arvu $taisarv numbrite summa on $summa"
+summa=0
+while [ $taisarv -gt 0 ]
+do
+	arv=$(($taisarv % 10))
+	taisarv=$(($taisarv / 10))
+	summa=$(($summa + $arv))
+done
+echo $summa
