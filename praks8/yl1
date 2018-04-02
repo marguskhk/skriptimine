@@ -1,0 +1,35 @@
+#!/bin/bash
+#
+
+
+#ISE PUSIMINE
+#parv=0
+#maks=10
+#while 	[$(($parv % 2)) -eq 0 ]; then
+#	
+#echo Arvude vahemikus 1 kuni 10 paarisarvude summa on:$parv"
+
+#TEISED LAHENDUSED
+#
+# FOR TSÜKLIGA
+#
+arvud='1 2 3 4 5 6 7 8 9 10' # nimekiri arvudest
+# Loome tuleva summa
+summa=0
+#viime väljastada need
+for arv in $arvud
+do
+	if [ $(($arv % 2)) -eq 0 ]; then
+	summa=$(($summa + $arv))
+	fi
+done
+echo "Arvude 1-10 paarisarvude summa on $summa"
+
+#FOR TSÜKLIGA VERSIOON 2
+#for ((arv=1; arv <=10; arv++))
+#do
+#	if [$(($arv % 2)) -eq ]; then
+#		summa=$($summa + $arv))
+#	fi
+#done
+#echo Paarisarvude summa vaheimukst 1..10 on $summa"
