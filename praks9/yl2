@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Modifitseeritud tärni tsükkel
+
+echo "Sisesta ridade arv:"
+read rida
+echo "Sisesta tarnide arv reas:"
+read tarn
+
+echo ""
+for (( i = 1; i <= $rida; i++))  ### Outer for loop ###
+do
+	echo -n "$i."
+	for (( j = 1 ; j <= $tarn; j++ )) ### Inner for loop"
+	do 
+		echo -n "* "
+	done
+	echo "" ### print the new line ###
+	done
