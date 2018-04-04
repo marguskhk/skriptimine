@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Modifitseeritud tärni tsükkel 2
+
+echo "Sisesta ridade arv:"
+read rida
+echo "Sisesta tarnide arv reas:"
+read tarn
+
+echo ""
+
+for (( i = 1; i <= $rida; i++))  ### Outer for loop ###
+do
+	echo -n "$i."
+	#Kui on esimene Või viimane rida
+	if [ $i -eq 1 -o $i -eq $rida  ]; then
+	# tuleb rida tärnidest
+	for (( j = 1 ; j <= $tarn; j++ )) ### Inner for loop"
+	do 
+		echo -n "* "
+	done
+	#teised read aga
+	else
+		echo -n "* "
+	#tühikud
+	for ((j = 2; j < $tarn; j++ ))
+	do
+			echo -n "  "
+	done
+			echo -n "* "
+	fi
+	
+echo "" ### print the new line ###
+done
