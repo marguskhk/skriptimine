@@ -14,7 +14,9 @@ read a
 echo -n "Sisesta reisi ööpaevade arv":
 read b
 
-
-c=$(())
-echo -n "Tagasi oled päeval number: "
+#Reisimise täisnadalate arv ja kui reisipäevi jääb üle
+c=$(($b % 7))
+#Tagasi jõuad
+d=$(($a + $c))
+echo  "Tagasi oled päeval number:$d "
 
