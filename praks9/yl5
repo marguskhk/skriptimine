@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# tsükkel  ringid või tärnid
+
+echo "Sisesta ridade arv:"
+read rida
+for (( i = 1; i <= $rida; i++ ))  ### Välitsükkel ###
+do
+	echo -n "$i."
+	for (( j = $rida - 1; j >= i; j-- )) ### Sisetsükkel"
+	do
+		echo -n "o "
+		done
+		for (( j = 1 ; j<= i ; j++ ))
+		do
+		echo -n "* "
+	
+	done	
+	echo "" ### print the new line ###
+	done #we're done here *drops mic*
+	
