@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# tärni tsükkel kolmnurk
+
+echo "Sisesta ridade arv:"
+read rida
+
+
+echo ""
+for (( i = 1; i <= $rida; i++))  ### Välitsükkel ###
+do
+	echo -n "$i."
+	for (( j = 1 ; j <=i; j++ )) ### Sisetsükkel"
+	do 
+		echo -n "* "
+	done
+	echo "" ### print the new line ###
+	done #we're done here *drops mic*
